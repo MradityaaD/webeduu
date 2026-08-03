@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel - Web Edu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            Web<span>Edu</span>
+        </div>
+        
+        <ul class="menu-nav">
+            <!-- Navigasi standar -->
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kategori.html">Kategori</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="tantang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+
+        <button id="tombol-tema">☀️ Mode Terang</button>
+    </nav>
+
+    <!-- AREA UTAMA ARTIKEL -->
+    <main class="area-baca">
+        
+        <!-- Tombol Kembali yang diperpendek tulisan teksnya -->
+        <a href="kategori.html" class="tombol-kembali">&larr; Kembali</a>
+
+        <article class="header-artikel">
+            <!-- Tempat Flexbox Baru (Judul di kiri, Logo HTML di kanan) -->
+            <div class="wadah-judul-flex">
+                <h1>Mengenal Struktur Dasar HTML5</h1>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Logo HTML" class="logo-judul-artikel">
+            </div>
+            
+            <!-- Tanggal Dihapus Sesuai Permintaan -->
+            <div class="meta-artikel">
+                <span class="meta-kategori">HTML DASAR</span>
+                <span>Oleh: Tim WebEdu</span>
+            </div>
+        </article>
+
+        <section class="isi-artikel">
+            <p>HTML (HyperText Markup Language) adalah bahasa standar yang digunakan untuk membuat dan menyusun halaman web. Jika kita analogikan, HTML adalah susunan rangka tulang atau struktur batu bata pada sebuah bangunan. Tanpanya, kita tidak bisa menaruh paragraf, gambar, maupun link di dalam halaman internet.</p>
+            
+            <p>Dalam perkembangannya, HTML5 menjadi versi terbaru yang membawa banyak pembaruan fitur, terutama dukungan terhadap multimedia (seperti pemutar video dan audio langsung bawaan tanpa memerlukan plugin pihak ketiga).</p>
+
+            <h3>1. Struktur Dokumen HTML5</h3>
+            <p>Setiap kali kamu membuat dokumen HTML, ada beberapa baris kode wajib yang harus dituliskan paling awal. Struktur dasar ini berfungsi untuk memberitahu browser bahwa file yang dibaca adalah halaman web versi HTML5 yang modern.</p>
+
+            <!-- Box Contoh Code -->
+            <div class="blok-kode">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Judul Web Kamu&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Halo Dunia!&lt;/h1&gt;
+    &lt;p&gt;Ini adalah paragraf pertama saya.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <h3>2. Penjelasan Tag-Tag Penting</h3>
+            <p>Berikut adalah arti dan fungsi dari struktur kode di atas agar kamu sangat mudah menjelaskannya saat ditanya dosen/guru pas presentasi tugas nanti:</p>
+            
+            <p><strong>&lt;!DOCTYPE html&gt;</strong>: Adalah deklarasi wajib yang memberi tahu browser bahwa dokumen ini menggunakan standar HTML5 terbaru.</p>
+            
+            <p><strong>&lt;html&gt;</strong>: Merupakan tag induk (parent) pembungkus seluruh konten web. Atribut <code>lang="id"</code> digunakan untuk menandakan bahwa konten web berbahasa Indonesia.</p>
+            
+            <p><strong>&lt;head&gt;</strong>: Adalah area belakang layar. Informasi di sini tidak langsung tampil di halaman web, melainkan berisi konfigurasi seperti judul tab browser (<code>&lt;title&gt;</code>) dan tautan file eksternal CSS/JS.</p>
+            
+            <p><strong>&lt;body&gt;</strong>: Bagian tubuh web. Semua kode yang ditulis di dalam tag ini (seperti tulisan h1, gambar, link) adalah konten nyata yang bisa dilihat langsung oleh pengunjung web.</p>
+            
+            <h3>Kesimpulan</h3>
+            <p>Memahami struktur dasar HTML5 adalah langkah paling krusial sebelum kamu melangkah lebih jauh untuk belajar mempercantik web dengan CSS atau menambahkan interaksi menggunakan JavaScript. Yuk, coba buat file pertamamu sekarang!</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="isi-footer">
+            <div class="kolom-footer">
+                <h4>KATEGORI BELAJAR</h4>
+                <ul>
+                    <li><a href="artikel_html.html">HTML Pemula</a></li>
+                    <li><a href="artikel_css.html">CSS Dasar</a></li>
+                    <li><a href="artikel_js.html">JavaScript Logika</a></li>
+                    <li><a href="artikel_vscode.html">Tips Web Developer</a></li>
+                    <li><a href="artikel_php.html">Belajar PHP</a></li>
+                    <li><a href="artikel_github.html">Tutorial GitHub</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>PERUSAHAAN</h4>
+                <ul>
+                    <li><a href="tantang.html">Tentang Kami</a></li>
+                    <li><a href="galeri.html">Galeri Tim</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>LEGALITAS</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 WebEdu. Muhammad Raditya Duta Pratama Xpplg 1.
+        </div>
+    </footer>
+
+    <script src="animasi.js"></script>
+</body>
+</html>

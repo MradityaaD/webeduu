@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel GitHub - Web Edu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR (Lengkap & Sama Persis) -->
+    <nav class="navbar">
+        <div class="logo">
+            Web<span>Edu</span>
+        </div>
+        
+        <ul class="menu-nav">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kategori.html">Kategori</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="tantang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+
+        <button id="tombol-tema">☀️ Mode Terang</button>
+    </nav>
+
+    <!-- AREA UTAMA ARTIKEL -->
+    <main class="area-baca">
+        
+        <!-- Tombol Kembali -->
+        <a href="kategori.html" class="tombol-kembali">&larr; Kembali</a>
+
+        <article class="header-artikel">
+            <!-- Flexbox: Judul di kiri, Logo GitHub di kanan -->
+            <div class="wadah-judul-flex">
+                <h1>Mengenal GitHub: Tempat Kolaborasi Developer</h1>
+                <!-- Logo GitHub dikasih background putih bulat biar kelihatan di tema gelap -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Logo GitHub" class="logo-judul-artikel" style="background-color: white; border-radius: 50%;">
+            </div>
+            
+            <!-- Info Tanpa Tanggal -->
+            <div class="meta-artikel">
+                <span class="meta-kategori">KOLABORASI</span>
+                <span>Oleh: Tim WebEdu</span>
+            </div>
+        </article>
+
+        <section class="isi-artikel">
+            <p>Bayangkan kamu sedang mengerjakan proyek website bersama 3 orang temanmu. Jika kalian hanya membagikan file kode lewat WhatsApp atau Flashdisk, pasti akan sangat membingungkan ketika harus menggabungkan pekerjaan masing-masing. Di sinilah <strong>Git dan GitHub</strong> menjadi penyelamat para *developer*.</p>
+            
+            <h3>1. Git vs GitHub: Apa Bedanya?</h3>
+            <p>Banyak pemula yang mengira keduanya adalah hal yang sama. Padahal mereka berbeda fungsi namun bekerja sama secara sempurna:</p>
+            <ul>
+                <li style="margin-bottom: 10px; color: var(--teks-utama); font-size: 17px; line-height: 1.8;">&bull; <strong>Git:</strong> Adalah program *Version Control System* (Sistem Pengontrol Versi). Anggap saja ini sebagai mesin waktu. Jika kode webmu tiba-tiba error parah, kamu bisa memutar waktu dan mengembalikan kodemu ke versi sebelumnya yang masih berfungsi.</li>
+                <li style="margin-bottom: 10px; color: var(--teks-utama); font-size: 17px; line-height: 1.8;">&bull; <strong>GitHub:</strong> Adalah layanan *cloud* (seperti Google Drive) khusus untuk menyimpan kode-kode yang menggunakan Git. Di GitHub, kodemu aman tersimpan secara online dan siap dikolaborasikan bersama tim.</li>
+            </ul>
+
+            <h3>2. Perintah Dasar Wajib Tahu</h3>
+            <p>Kamu biasanya akan menggunakan terminal (Command Prompt/CMD) atau terminal bawaan VS Code untuk menjalankan perintah Git. Berikut adalah siklus dasar mengirim kodingan dari laptopmu menuju ke GitHub:</p>
+
+            <!-- Box Contoh Code Command Line Git -->
+            <div class="blok-kode">
+                <pre><code>
+
+// 2. Memberi nama/label pada perubahan tersebut (menyimpan versi)
+git commit -m "Menambahkan halaman Detail Berita GitHub"
+
+// 3. Mengirim / Mengunggah kode tersebut ke server GitHub
+git push origin main</code></pre>
+            </div>
+
+            <h3>Kesimpulan Perjalananmu!</h3>
+            <p>Mulai dari merangkai HTML, mempercantik dengan CSS, menghidupkannya lewat JavaScript, menyusun logika Backend dengan PHP, dan akhirnya menyimpannya di GitHub. Rangkaian pengetahuan ini adalah fondasi yang luar biasa solid bagi kamu yang ingin terjun sebagai Web Developer profesional.</p>
+            
+            <p>Tetap semangat ngoding, jangan takut error karena error adalah cara komputer mengajarimu. Selamat berkarya!</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (Lengkap & Sama Persis) -->
+    <footer class="footer">
+        <div class="isi-footer">
+            <div class="kolom-footer">
+                <h4>KATEGORI BELAJAR</h4>
+                <ul>
+                    <li><a href="artikel_html.html">HTML Pemula</a></li>
+                    <li><a href="artikel_css.html">CSS Dasar</a></li>
+                    <li><a href="artikel_js.html">JavaScript Logika</a></li>
+                    <li><a href="artikel_vscode.html">Tips Web Developer</a></li>
+                    <li><a href="artikel_php.html">Belajar PHP</a></li>
+                    <li><a href="artikel_github.html">Tutorial GitHub</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>PERUSAHAAN</h4>
+                <ul>
+                    <li><a href="tantang.html">Tentang Kami</a></li>
+                    <li><a href="galeri.html">Galeri Tim</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>LEGALITAS</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 WebEdu. Muhammad Raditya Duta Pratama Xpplg 1.
+        </div>
+    </footer>
+
+    <script src="animasi.js"></script>
+</body>
+</html>

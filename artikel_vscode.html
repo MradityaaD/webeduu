@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel VS Code - Web Edu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            Web<span>Edu</span>
+        </div>
+        
+        <ul class="menu-nav">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kategori.html">Kategori</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="tantang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+
+        <!-- Tombol ini nanti dikendalikan oleh script.js -->
+        <button id="tombol-tema">☀️ Mode Terang</button>
+    </nav>
+
+    <!-- AREA UTAMA ARTIKEL -->
+    <main class="area-baca">
+        
+        <a href="kategori.html" class="tombol-kembali">&larr; Kembali</a>
+
+        <article class="header-artikel">
+            <!-- Flexbox: Judul di kiri, Logo VS Code di kanan -->
+            <div class="wadah-judul-flex">
+                <h1>Setup VS Code & DevTools</h1>
+                <!-- Mengambil icon VS Code resmi dari Devicon -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="Logo VS Code" class="logo-judul-artikel">
+            </div>
+            
+            <div class="meta-artikel">
+                <span class="meta-kategori">TOOLS PEMULA</span>
+                <span>Oleh: Tim WebEdu</span>
+            </div>
+        </article>
+
+        <section class="isi-artikel">
+            <p>Seorang tukang kayu membutuhkan palu dan gergaji yang bagus untuk menghasilkan perabotan berkualitas. Begitu pula dengan seorang Web Developer. Sebelum mulai menulis ratusan baris kode HTML, CSS, dan JavaScript, kita membutuhkan alat tempur yang tepat. Alat utama kita adalah <strong>Text Editor</strong> dan <strong>Browser DevTools</strong>.</p>
+
+            <h3>1. Visual Studio Code (VS Code)</h3>
+            <p>VS Code saat ini adalah text editor paling populer di seluruh dunia, dibuat oleh Microsoft dan bisa digunakan secara gratis. Berbeda dengan mengetik di Notepad bawaan komputer, VS Code memiliki fitur <em>Syntax Highlighting</em> (memberi warna berbeda untuk setiap jenis kode), sehingga mata kita tidak mudah lelah dan kode jauh lebih mudah dibaca.</p>
+
+            <p>Untuk mempermudah pekerjaan kita, pastikan kamu menginstal beberapa <em>Extension</em> (tambahan fitur) wajib bagi pemula di bawah ini melalui menu Extension di VS Code:</p>
+
+            <!-- Box Contoh Command/Teks (Karena ini bukan kodingan, kita isi daftar) -->
+            <div class="blok-kode">
+                <pre><code>1. Live Server
+   (Fungsinya untuk melihat perubahan HTML/CSS secara langsung
+    tanpa perlu menekan tombol refresh / F5 berkali-kali di browser).
+
+2. Prettier - Code formatter
+   (Fungsinya merapikan jarak baris kode secara otomatis
+    ketika kita menekan tombol Save / Ctrl+S).
+
+3. Auto Rename Tag
+   (Ketika kita mengubah tag pembuka HTML, tag penutupnya
+    akan otomatis ikut berubah).</code></pre>
+            </div>
+
+            <h3>2. Menguasai Browser DevTools</h3>
+            <p>Alat kedua yang tidak kalah penting sudah terpasang langsung di dalam browsermu (seperti Google Chrome atau Mozilla Edge). Fitur ini bernama <strong>Developer Tools (Inspect Element)</strong>.</p>
+            
+            <p>Cara membukanya sangat mudah. Saat membuka website apa pun, klik kanan di area kosong, lalu pilih menu "Inspect" (Inspeksi), atau cukup tekan tombol <strong>F12</strong> pada keyboard laptopmu.</p>
+
+            <p>Dengan DevTools, kita bisa melakukan banyak hal "sakti", seperti:</p>
+            <ul>
+                <li style="margin-bottom: 10px; color: var(--teks-utama); font-size: 17px; line-height: 1.8;">&bull; <strong>Menganalisis Error:</strong> Jika JavaScript kita tidak berjalan, panel <em>Console</em> akan memberitahu letak baris yang salah.</li>
+                <li style="margin-bottom: 10px; color: var(--teks-utama); font-size: 17px; line-height: 1.8;">&bull; <strong>Eksperimen CSS:</strong> Kita bisa iseng mengubah ukuran font atau mengganti warna teks secara langsung dari panel <em>Elements</em> tanpa mengubah kode asli di VS Code.</li>
+                <li style="margin-bottom: 10px; color: var(--teks-utama); font-size: 17px; line-height: 1.8;">&bull; <strong>Uji Responsif:</strong> Membantu kita mensimulasikan bagaimana tampilan website kita jika dibuka dari layar Handphone atau Tablet.</li>
+            </ul>
+            
+            <p style="margin-top: 25px;">Kuasai kedua "senjata" ini, maka perjalanan belajarmu akan menjadi dua kali lebih cepat dan terhindar dari banyak rasa frustrasi akibat kode yang error!</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="isi-footer">
+            <div class="kolom-footer">
+                <h4>KATEGORI BELAJAR</h4>
+                <ul>
+                    <li><a href="artikel_html.html">HTML Pemula</a></li>
+                    <li><a href="artikel_css.html">CSS Dasar</a></li>
+                    <li><a href="artikel_js.html">JavaScript Logika</a></li>
+                    <li><a href="artikel_vscode.html">Tips Web Developer</a></li>
+                    <li><a href="artikel_php.html">Belajar PHP</a></li>
+                    <li><a href="artikel_github.html">Tutorial GitHub</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>PERUSAHAAN</h4>
+                <ul>
+                    <li><a href="tantang.html">Tentang Kami</a></li>
+                    <li><a href="galeri.html">Galeri Tim</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>LEGALITAS</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 WebEdu. Muhammad Raditya Duta Pratama Xpplg 1.
+        </div>
+    </footer>
+
+    <!-- PANGGIL FILE JS EKSTERNAL LU -->
+    <script src="animasi.js"></script>
+    
+</body>
+</html>

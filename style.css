@@ -1,0 +1,800 @@
+    /* Beranda -------------------------------------------------------------*/
+    :root {
+        /* Ini warna default (Mode Gelap) - SEKARANG HITAM PEKAT */
+        --bg-utama: #000000;
+        /* Hitam murni */
+        --bg-kartu: #111111;
+        /* Hitam sedikit keabu-abuan buat kotak */
+        --teks-utama: #ffffff;
+        /* Warna teks putih */
+        --teks-redup: #a0a0a0;
+        /* Warna teks abu-abu */
+        --warna-aksen: #f39c12;
+        /* Warna kuning oren untuk teks logo/hover */
+        --garis: #333333;
+        /* Warna garis yang lebih gelap */
+    }
+
+    /* Saat class 'mode-terang' aktif, warna ini yang dipakai */
+    body.mode-terang {
+        --bg-utama: #f4f4f9;
+        --bg-kartu: #ffffff;
+        --teks-utama: #333333;
+        --teks-redup: #666666;
+        --warna-aksen: #00b3d3;
+        --garis: #dddddd;
+    }
+
+    /* Reset margin biar rapi dari ujung ke ujung */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: var(--bg-utama);
+        color: var(--teks-utama);
+        /* Animasi halus saat ganti tema */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    a {
+        text-decoration: none;
+        /* Hilangin garis bawah di link */
+        color: var(--teks-utama);
+    }
+
+    ul {
+        list-style: none;
+        /* Hilangin titik-titik di list */
+    }
+
+    /* =========================================
+           2. BAGIAN NAVBAR (MENU ATAS)
+           ========================================= */
+    .navbar {
+        background-color: var(--bg-kartu);
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        /* Bikin logo kiri, menu tengah, tombol kanan */
+        align-items: center;
+        border-bottom: 1px solid var(--garis);
+
+        /* BIKIN NAVBAR NEMPEL SAAT DI-SCROLL */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        /* Z-index ini biar navbar selalu ada di lapisan paling atas */
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .logo span {
+        color: var(--warna-aksen);
+        /* Warna kuning untuk kata 'Edu' */
+    }
+
+    .menu-nav {
+        display: flex;
+        gap: 30px;
+        /* Jarak antar menu */
+    }
+
+    .menu-nav a:hover {
+        color: var(--warna-aksen);
+        /* Berubah warna pas kursor di atasnya */
+    }
+
+    /* Tombol ganti tema */
+    #tombol-tema {
+        background-color: transparent;
+        color: var(--teks-utama);
+        border: 1px solid var(--garis);
+        padding: 8px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* =========================================
+           3. BAGIAN HERO (JUDUL BESAR DI BERANDA)
+           ========================================= */
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        color: var(--teks-redup);
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto;
+        /* Biar paragrafnya ke tengah */
+        line-height: 1.6;
+    }
+
+    /* =========================================
+           4. BAGIAN ARTIKEL BERANDA (KARTU)
+           ========================================= */
+    .area-artikel {
+        padding: 20px 50px 80px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .daftar-kartu {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .kartu {
+        background-color: var(--bg-kartu);
+        border: 1px solid var(--garis);
+        border-radius: 10px;
+        padding: 20px;
+        width: 45%;
+        /* Lebar kartu */
+        transition: transform 0.3s;
+        /* Animasi pas di-hover */
+        overflow: hidden;
+        /* Supaya ujung atas kotak logo tetap melengkung ngikutin kartu */
+    }
+
+    .kartu:hover {
+        transform: translateY(-5px);
+        /* Kartu naik dikit pas kursor di atasnya */
+    }
+
+    /* GAYA UNTUK WADAH LOGO DI KARTU ARTIKEL (SEPERTI DI SCREENSHOT) */
+    .wadah-logo {
+        background-color: #1a1a1a;
+        /* Warna latar belakang gelap khusus untuk kotak logo */
+        margin: -20px -20px 20px -20px;
+        /* Trik narik kotak sampai ujung kartu */
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid var(--garis);
+    }
+
+    .gambar-logo {
+        width: 80px;
+        /* Ukuran logo */
+        height: auto;
+    }
+
+    .kategori-label {
+        font-size: 12px;
+        background-color: var(--garis);
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-weight: bold;
+    }
+
+    .kartu h3 {
+        margin: 15px 0 10px;
+        font-size: 22px;
+    }
+
+    .kartu p {
+        color: var(--teks-redup);
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .kartu a {
+        color: var(--warna-aksen);
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* =========================================
+           5. BAGIAN FOOTER (BAWAH)
+           ========================================= */
+    .footer {
+        background-color: var(--bg-kartu);
+        border-top: 1px solid var(--garis);
+        padding: 50px;
+    }
+
+    .isi-footer {
+        display: flex;
+        justify-content: space-around;
+        /* Jarak rata antar 3 kolom */
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .kolom-footer h4 {
+        margin-bottom: 20px;
+        color: var(--teks-utama);
+    }
+
+    .kolom-footer ul li {
+        margin-bottom: 10px;
+    }
+
+    .kolom-footer ul li a {
+        color: var(--teks-redup);
+        font-size: 14px;
+    }
+
+    .kolom-footer ul li a:hover {
+        color: var(--warna-aksen);
+    }
+
+    .copyright {
+        text-align: center;
+        color: var(--teks-redup);
+        font-size: 13px;
+        border-top: 1px solid var(--garis);
+        padding-top: 20px;
+    }
+
+    /* kategori -------------------------------------------------------------*/
+
+    /* Tambahan untuk bikin kartu bisa turun ke baris bawah kalau kepenuhan */
+    .daftar-kartu-banyak {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* INI KUNCI BIAR KARTU TURUN KE BAWAH KALAU LEBIH DARI 3 */
+    }
+
+    /* Bagian Atas Halaman Kategori */
+    .header-kategori {
+        text-align: center;
+        padding: 60px 20px 30px;
+    }
+
+    .header-kategori h1 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    /* Styling buat Search Bar (Kolom Pencarian) */
+    .kotak-pencarian {
+        width: 100%;
+        max-width: 500px;
+        padding: 15px 20px;
+        font-size: 16px;
+        border-radius: 30px;
+        border: 2px solid var(--garis);
+        background-color: var(--bg-kartu);
+        color: var(--teks-utama);
+        outline: none;
+        /* Ngilangin garis biru pas diklik */
+        transition: border-color 0.3s;
+    }
+
+    .kotak-pencarian:focus {
+        border-color: var(--warna-aksen);
+        /* Warna garis berubah pas lagi ngetik */
+    }
+
+    /* Styling untuk teks kalau pencarian nggak ketemu */
+    #pesan-kosong {
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+        color: var(--warna-aksen);
+        margin-top: 40px;
+        display: none;
+        /* Diumpetin dulu, nanti dimunculin pake JS */
+    }
+
+    /* HALAMAN GALERI -------------------------------------------------------------*/
+
+    .header-galeri {
+        text-align: center;
+        padding: 60px 20px 40px;
+    }
+
+    .header-galeri h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .header-galeri p {
+        color: var(--teks-redup);
+        font-size: 16px;
+    }
+
+    /* Kita pakai sistem Grid biar fotonya rapi bersusun kayak Instagram/Pinterest */
+    .kumpulan-galeri {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        padding: 0 50px 80px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .item-galeri {
+        background-color: var(--bg-kartu);
+        border: 1px solid var(--garis);
+        border-radius: 10px;
+        overflow: hidden;
+        /* Biar gambar yang melengkung nggak keluar jalur */
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+
+    .item-galeri:hover {
+        transform: scale(1.03);
+        /* Efek membesar dikit kalau kursor di atasnya */
+        border-color: var(--warna-aksen);
+    }
+
+    .item-galeri img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        /* Biar gambar proporsional, gak gepeng */
+        display: block;
+    }
+
+    .teks-galeri {
+        padding: 15px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        color: var(--teks-utama);
+    }
+
+    /* HALAMAN TENTANG KAMI -------------------------------------------------------------*/
+
+    /* CSS KHUSUS TENTANG KAMI (Tanpa Foto) */
+    .area-tentang {
+        padding: 60px 20px 80px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .header-tentang {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .header-tentang h1 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .header-tentang p {
+        color: var(--teks-redup);
+        font-size: 16px;
+    }
+
+    /* Kotak profil  */
+    .kotak-profil {
+        background-color: var(--bg-kartu);
+        border: 1px solid var(--garis);
+        border-radius: 15px;
+        padding: 40px;
+        margin-bottom: 40px;
+    }
+
+    .deskripsi-profil h2 {
+        font-size: 28px;
+        margin-bottom: 5px;
+        color: var(--warna-aksen);
+    }
+
+    .deskripsi-profil h4 {
+        color: var(--teks-redup);
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+
+    .deskripsi-profil p {
+        line-height: 1.7;
+        font-size: 15px;
+        color: var(--teks-utama);
+        margin-bottom: 15px;
+    }
+
+    .kotak-visi {
+        background-color: var(--bg-kartu);
+        border: 1px solid var(--garis);
+        border-left: 5px solid var(--warna-aksen);
+        border-radius: 10px;
+        padding: 25px 30px;
+        line-height: 1.6;
+    }
+
+    .kotak-visi h3 {
+        margin-bottom: 10px;
+    }
+
+    .kotak-visi p {
+        color: var(--teks-redup);
+        font-size: 15px;
+    }
+
+    /* HALAMAN KONTAK ------------------------------------------------------------- */
+
+    /* Bikin tata letaknya jadi 2 kolom (Kiri Teks, Kanan Form) */
+    .area-kontak {
+        padding: 80px 50px;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        /* Biar kalau di layar HP/kecil, formnya turun ke bawah otomatis */
+    }
+
+    /* Styling Bagian Kiri (Teks Informasi) */
+    .info-kontak {
+        flex: 1;
+        /* Biar lebarnya bagi dua secara adil */
+        min-width: 300px;
+    }
+
+    .info-kontak h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .info-kontak p {
+        color: var(--teks-redup);
+        margin-bottom: 40px;
+        line-height: 1.6;
+    }
+
+    .item-info {
+        margin-bottom: 25px;
+    }
+
+    .item-info h4 {
+        color: var(--warna-aksen);
+        margin-bottom: 5px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .item-info p {
+        color: var(--teks-utama);
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    /* Styling Bagian Kanan (Kotak Pengisian Pesan) */
+    .kotak-form {
+        flex: 1;
+        /* Biar lebarnya bagi dua secara adil */
+        min-width: 300px;
+        background-color: var(--bg-kartu);
+        padding: 40px;
+        border-radius: 15px;
+        border: 1px solid var(--garis);
+    }
+
+    .grup-input {
+        margin-bottom: 20px;
+    }
+
+    .grup-input label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: var(--teks-redup);
+    }
+
+    /* Styling buat kotak ngetik (input & textarea) */
+    .grup-input input,
+    .grup-input textarea {
+        width: 100%;
+        padding: 15px;
+        background-color: var(--bg-utama);
+        border: 1px solid var(--garis);
+        color: var(--teks-utama);
+        border-radius: 8px;
+        outline: none;
+        /* Ilangin garis biru bawaan browser pas di-klik */
+        font-size: 15px;
+        transition: border-color 0.3s;
+    }
+
+    /* Pas lagi ngetik, garis pinggirnya berubah warna oren */
+    .grup-input input:focus,
+    .grup-input textarea:focus {
+        border-color: var(--warna-aksen);
+    }
+
+    /* Styling tombol Kirim */
+    .btn-kirim {
+        background-color: var(--warna-aksen);
+        color: #000;
+        /* Teks hitam biar kontras sama warna oren */
+        border: none;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+        /* Tombolnya memanjang penuhin kotak */
+        transition: background-color 0.3s;
+    }
+
+    .btn-kirim:hover {
+        background-color: #d35400;
+        /* Warna lebih gelap pas di-hover */
+        color: #fff;
+    }
+
+    /* STYLE UNTUK SEMUA HALAMAN DETAIL ARTIKEL (HTML, CSS, JS, dll ---------------) */
+
+    /* 1. WADAH UTAMA ARTIKEL */
+    .area-baca {
+        padding: 60px 20px 80px;
+        /* Jarak ruang kosong: atas 60px, kanan-kiri 20px, bawah 80px */
+        max-width: 800px;
+        /* Lebar maksimal dibatasi 800px biar teks gak terlalu panjang ke samping (nyaman dibaca mata) */
+        margin: 0 auto;
+        /* Rahasia bikin posisi kotak ini otomatis ada di tengah-tengah layar PC/Laptop */
+    }
+
+    /* 2. TOMBOL KEMBALI */
+    .tombol-kembali {
+        display: inline-flex;
+        /* Bikin ikon panah dan teks tulisan bisa sejajar ke samping */
+        align-items: center;
+        /* Bikin posisi panah dan teks rata tengah atas-bawah */
+        gap: 8px;
+        /* Jarak antara ikon panah dengan tulisan */
+        color: var(--warna-aksen);
+        /* Pakai warna kuning/oren dari settingan atas */
+        font-weight: bold;
+        /* Teks dicetak tebal */
+        font-size: 14px;
+        /* Ukuran huruf */
+        margin-bottom: 30px;
+        /* Jarak dari tombol ke bawah (ke arah judul artikel) */
+        transition: transform 0.2s;
+        /* Bikin animasi pergerakan jadi mulus selama 0.2 detik */
+    }
+
+    /* 3. EFEK SAAT TOMBOL KEMBALI DISENTUH MOUSE */
+    .tombol-kembali:hover {
+        transform: translateX(-5px);
+        /* Geser posisinya ke kiri sebanyak 5 pixel (animasi maju mundur) */
+    }
+
+    /* 4. TEMPAT JUDUL & LOGO (SEJAJAR) */
+    .wadah-judul-flex {
+        display: flex;
+        /* Fitur sakti CSS buat bikin elemen di dalamnya berjejer ke samping */
+        align-items: center;
+        /* Rata tengah vertikal antara teks judul dan logo */
+        justify-content: space-between;
+        /* Judul didorong ke ujung kiri, Logo didorong ke ujung kanan */
+        gap: 20px;
+        /* Jarak antara tulisan judul dan gambar logo biar ga nempel */
+        margin-bottom: 20px;
+        /* Jarak ke bawah (ke arah nama penulis/tanggal) */
+    }
+
+    /* Teks Judul Utama */
+    .wadah-judul-flex h1 {
+        font-size: 38px;
+        /* Ukuran judul super besar */
+        line-height: 1.3;
+        /* Jarak antar baris kalimat judul (biar ga terlalu rapet kalau judulnya 2 baris) */
+    }
+
+    /* Gambar Logo (HTML/CSS/JS) di samping judul */
+    .logo-judul-artikel {
+        width: 70px;
+        /* Lebar logo dipatok 70 pixel */
+        height: auto;
+        /* Tingginya otomatis menyesuaikan biar gambar ga gepeng */
+        flex-shrink: 0;
+        /* Mencegah logo mengecil/penyet kalau layar layarnya disempitin (HP) */
+    }
+
+    /* 5. INFO TAMBAHAN (KATEGORI & PENULIS) */
+    .meta-artikel {
+        display: flex;
+        /* Bikin sejajar ke samping */
+        gap: 15px;
+        /* Jarak antar info */
+        align-items: center;
+        color: var(--teks-redup);
+        /* Teks warna abu-abu */
+        font-size: 14px;
+        margin-bottom: 40px;
+        /* Jarak dari info ke paragraf pertama artikel */
+        padding-bottom: 20px;
+        /* Jarak dari teks info ke garis bawah */
+        border-bottom: 1px solid var(--garis);
+        /* Bikin garis pembatas abu-abu di bawah info */
+    }
+
+    /* Label Kategori (Kotak Kecil warna Oren) */
+    .meta-kategori {
+        background-color: var(--warna-aksen);
+        /* Latar belakang oren */
+        color: #000;
+        /* Tulisan warna hitam biar kelihatan jelas di atas warna oren */
+        padding: 4px 10px;
+        /* Ruang kosong di dalam kotak label */
+        border-radius: 12px;
+        /* Bikin ujung kotak jadi melengkung (seperti pil obat) */
+        font-weight: bold;
+        /* Cetak tebal */
+        font-size: 12px;
+    }
+
+    /* 6. ISI PARAGRAF ARTIKEL */
+    .isi-artikel p {
+        font-size: 17px;
+        /* Ukuran font standar untuk bacaan */
+        line-height: 1.8;
+        /* Jarak antar baris teks diperlebar biar mata pembaca gak cepet lelah */
+        margin-bottom: 25px;
+        /* Jarak dari satu paragraf ke paragraf berikutnya */
+        color: var(--teks-utama);
+        /* Warna putih */
+        text-align: justify;
+        /* Bikin ujung paragraf kanan dan kiri rata memanjang (seperti di koran/buku) */
+    }
+
+    /* Sub-judul di dalam artikel (contoh: "1. Struktur HTML") */
+    .isi-artikel h3 {
+        font-size: 24px;
+        margin: 40px 0 15px;
+        /* Jarak luarnya: atas 40px, kanan-kiri 0, bawah 15px */
+        color: var(--warna-aksen);
+        /* Pakai warna oren biar beda dari teks biasa */
+    }
+
+    /* 7. KOTAK UNTUK MENAMPILKAN CONTOH KODE */
+    .blok-kode {
+        background-color: #111111;
+        /* Latar belakang sangat gelap khas text editor koding */
+        border: 1px solid var(--garis);
+        /* Garis pinggir tipis */
+        border-radius: 8px;
+        /* Ujung kotak agak melengkung */
+        padding: 20px;
+        /* Jarak kode dari tepi kotak */
+        margin: 30px 0;
+        /* Jarak luar kotak ke paragraf atas dan bawahnya */
+        overflow-x: auto;
+        /* PENTING: Kalau baris kode kepanjangan, bakal muncul scroll geser kanan-kiri. Layout web jadi aman dan ga rusak */
+    }
+
+    /* Perubahan warna background kotak kode KALAU Tombol Mode Terang ditekan */
+    body.mode-terang .blok-kode {
+        background-color: #f5f5f5;
+        /* Background berubah jadi abu-abu sangat terang */
+    }
+
+    /* Tag bawaan HTML untuk tulisan koding */
+    .blok-kode pre {
+        margin: 0;
+        /* Reset margin bawaan browser biar ga ada jarak aneh */
+    }
+
+    .blok-kode code {
+        font-family: 'Courier New', Courier, monospace;
+        /* Pakai font mesin tik (khas programmer) */
+        font-size: 15px;
+        line-height: 1.5;
+        color: #39c5bb;
+        /* Warna teks kodenya dibikin cyan/kebiruan */
+    }
+
+    /* Perubahan warna teks kodenya KALAU Tombol Mode Terang ditekan */
+    body.mode-terang .blok-kode code {
+        color: #39c5bb;
+        /* Warnanya digelapin biar bisa kebaca di background terang */
+    }
+
+    /* KODE SAKTI RESPONSIVE (MOBILE, TABLET, PC) */
+
+/* --- TABLET (Layar Menengah, Lebar Maksimal 992px) --- */
+@media screen and (max-width: 992px) {
+    /* Perkecil jarak pinggir (padding) biar konten gak mepet banget ke pinggir layar tablet */
+    .navbar { padding: 20px 30px; }
+    .area-artikel, .kumpulan-galeri, .area-tentang, .area-kontak, .footer { 
+        padding-left: 30px; 
+        padding-right: 30px; 
+    }
+    
+    /* Jarak menu navigasi dirapetin dikit */
+    .menu-nav { gap: 15px; }
+
+    /* Kartu di beranda biar ukurannya pas di tablet (jadi 2 kolom rata) */
+    .kartu { width: 48%; }
+}
+
+/* --- HANDPHONE (Layar Kecil, Lebar Maksimal 768px) --- */
+@media screen and (max-width: 768px) {
+    /* 1. NAVBAR (Menu Atas) */
+    .navbar {
+        flex-direction: column; /* Menu numpuk ke bawah (Logo atas, menu tengah, tombol bawah) */
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    .menu-nav {
+        flex-wrap: wrap; /* Kalau layar kekecilan, teks menu otomatis turun baris */
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    /* 2. HEADER / HERO (Judul Besar Beranda) */
+    .hero { padding: 50px 20px; }
+    .hero h1 { font-size: 30px; }
+    .hero p { font-size: 15px; }
+
+    /* 3. KARTU BERANDA & KATEGORI */
+    .daftar-kartu { 
+        flex-direction: column; /* Kartu yang tadinya ke samping, dipaksa baris ke bawah */
+    }
+    .kartu { 
+        width: 100%; /* Tiap kartu penuhin layar HP kiri ke kanan */
+        margin-bottom: 20px;
+    }
+    
+    /* 4. FOOTER (Bagian Paling Bawah) */
+    .isi-footer {
+        flex-direction: column; /* 3 Kolom footer dipaksa numpuk ke bawah */
+        text-align: center; /* Teks dibikin rata tengah biar cakep di HP */
+        gap: 30px;
+    }
+
+    /* 5. ARTIKEL DETAIL (Halaman Bacaan) */
+    .wadah-judul-flex {
+        flex-direction: column-reverse; /* Judul turun ke bawah, Logo naik ke atas */
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .wadah-judul-flex h1 { font-size: 28px; }
+    .logo-judul-artikel { width: 60px; }
+    .area-baca { padding-top: 30px; padding-bottom: 50px; }
+    .isi-artikel p { font-size: 16px; } /* Huruf dipencilin dikit biar nyaman di HP */
+
+    /* 6. KONTAK */
+    .area-kontak { 
+        gap: 30px; 
+        padding-top: 40px; 
+        padding-bottom: 40px; 
+    }
+    .info-kontak h1 { font-size: 32px; }
+    .kotak-form { padding: 25px; } /* Padding dalam kotak form dikecilin */
+
+    /* 7. TENTANG KAMI */
+    .area-tentang { padding-top: 40px; padding-bottom: 40px; }
+    .kotak-profil { padding: 25px; }
+    .deskripsi-profil h2 { font-size: 24px; }
+}
+
+/* --- HP KECIL BANGET (Lebar Maksimal 480px) --- */
+@media screen and (max-width: 480px) {
+    /* Penyesuaian ekstra buat HP yang layarnya super sempit */
+    .menu-nav { gap: 10px; font-size: 13px; }
+    #tombol-tema { font-size: 12px; padding: 6px 12px; }
+    .hero h1 { font-size: 26px; }
+    .kotak-pencarian { font-size: 14px; padding: 12px 15px; }
+}

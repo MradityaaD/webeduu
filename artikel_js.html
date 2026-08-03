@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel JS - Web Edu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            Web<span>Edu</span>
+        </div>
+        
+        <ul class="menu-nav">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kategori.html">Kategori</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="tantang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+
+        <button id="tombol-tema">☀️ Mode Terang</button>
+    </nav>
+
+    <!-- AREA UTAMA ARTIKEL -->
+    <main class="area-baca">
+        
+        <!-- Tombol Kembali Simpel -->
+        <a href="kategori.html" class="tombol-kembali">&larr; Kembali</a>
+
+        <article class="header-artikel">
+            <!-- Flexbox: Judul di kiri, Logo JS di kanan -->
+            <div class="wadah-judul-flex">
+                <h1>Membuat Web Interaktif dengan JavaScript</h1>
+                <!-- Logo JS dari internet -->
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Logo JS" class="logo-judul-artikel">
+            </div>
+            
+            <!-- Info tanpa Tanggal -->
+            <div class="meta-artikel">
+                <span class="meta-kategori">JAVASCRIPT</span>
+                <span>Oleh: Tim WebEdu</span>
+            </div>
+        </article>
+
+        <section class="isi-artikel">
+            <p>Kita kembali lagi ke analogi membangun rumah. Jika HTML adalah rangka bangunan dan CSS adalah cat dinding serta dekorasinya, maka <strong>JavaScript (JS)</strong> adalah instalasi listrik dan saluran airnya. JavaScript adalah bahasa pemrograman yang membuat website menjadi "hidup" dan bisa diajak berinteraksi.</p>
+            
+            <p>Tanpa JavaScript, website hanya bersifat statis (hanya bisa dibaca). Dengan JavaScript, kamu bisa membuat tombol yang merespon ketika diklik, membuat animasi popup, mengubah tema gelap/terang, hingga mengambil data dari server tanpa perlu me-*refresh* halaman.</p>
+
+            <h3>1. Cara Memasukkan JavaScript</h3>
+            <p>Sama seperti CSS, kode JavaScript bisa disisipkan langsung ke dalam HTML menggunakan tag <code>&lt;script&gt;</code>. Biasanya, pemanggilan script diletakkan di bagian paling bawah dokumen (tepat sebelum tag penutup <code>&lt;/body&gt;</code>) agar tidak menghambat pemuatan elemen visual HTML.</p>
+
+            <div class="blok-kode">
+                <pre><code>&lt;script&gt;
+    // Ini adalah komentar di JavaScript
+    alert("Selamat datang di Web Developer!");
+&lt;/script&gt;</code></pre>
+            </div>
+
+            <h3>2. Menambahkan Logika Interaktif</h3>
+            <p>Kekuatan utama JavaScript ada pada kemampuannya memanipulasi HTML yang sudah ada di layar (disebut DOM Manipulation). Contoh paling sederhana adalah mendeteksi ketika pengguna mengklik sebuah tombol, lalu melakukan sesuatu setelahnya.</p>
+
+            <!-- Box Contoh Code JS -->
+            <div class="blok-kode">
+                <pre><code>// 1. Cari tombol berdasarkan ID-nya di HTML
+const tombol = document.getElementById("tombol-pesan");
+
+// 2. Beri perintah ketika tombol diklik
+tombol.addEventListener("click", function() {
+    alert("Keren, kamu berhasil mengklik tombol!");
+    
+    // Ubah warna latar belakang web menjadi hitam
+    document.body.style.backgroundColor = "black";
+});</code></pre>
+            </div>
+
+            <h3>Belajar Logika Pemrograman</h3>
+            <p>Berbeda dengan HTML dan CSS, JavaScript adalah bahasa pemrograman yang utuh. Kamu akan mulai belajar konsep logika dasar seperti variabel (menyimpan data), percabangan (if/else), dan perulangan (loop). Fitur "Mode Gelap" yang ada di pojok kanan atas website ini juga sepenuhnya dibuat menggunakan JavaScript murni yang super sederhana!</p>
+            
+            <p>Selamat, sekarang kamu sudah memahami "Trisula" dasar dalam pembuatan website (HTML, CSS, JS). Kamu sudah siap membangun websitemu sendiri!</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="isi-footer">
+            <div class="kolom-footer">
+                <h4>KATEGORI BELAJAR</h4>
+                <ul>
+                    <li><a href="artikel_html.html">HTML Pemula</a></li>
+                    <li><a href="artikel_css.html">CSS Dasar</a></li>
+                    <li><a href="artikel_js.html">JavaScript Logika</a></li>
+                    <li><a href="artikel_vscode.html">Tips Web Developer</a></li>
+                    <li><a href="artikel_php.html">Belajar PHP</a></li>
+                    <li><a href="artikel_github.html">Tutorial GitHub</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>PERUSAHAAN</h4>
+                <ul>
+                    <li><a href="tantang.html">Tentang Kami</a></li>
+                    <li><a href="galeri.html">Galeri Tim</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>LEGALITAS</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 WebEdu. Muhammad Raditya Duta Pratama Xpplg 1.
+        </div>
+    </footer>
+
+    <script src="animasi.js"></script>
+</body>
+</html>

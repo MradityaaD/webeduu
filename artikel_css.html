@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel CSS - Web Edu</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            Web<span>Edu</span>
+        </div>
+
+        <ul class="menu-nav">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kategori.html">Kategori</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="tantang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+
+        <button id="tombol-tema">☀️ Mode Terang</button>
+    </nav>
+
+    <!-- AREA UTAMA ARTIKEL -->
+    <main class="area-baca">
+
+        <!-- Tombol Kembali Simpel -->
+        <a href="kategori.html" class="tombol-kembali">&larr; Kembali</a>
+
+        <article class="header-artikel">
+            <!-- Flexbox: Judul di kiri, Logo CSS3 di kanan -->
+            <div class="wadah-judul-flex">
+                <h1>Mempercantik Web dengan CSS</h1>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                    alt="Logo CSS" class="logo-judul-artikel">
+            </div>
+
+            <!-- Info tanpa Tanggal -->
+            <div class="meta-artikel">
+                <span class="meta-kategori">CSS STYLING</span>
+                <span>Oleh: Tim WebEdu</span>
+            </div>
+        </article>
+
+        <section class="isi-artikel">
+            <p>Jika HTML dianalogikan sebagai struktur rangka rumah, maka <strong>CSS (Cascading Style Sheets)</strong>
+                adalah cat dinding, desain interior, dekorasi, hingga tata letak furnitur di dalamnya. Tanpa CSS,
+                halaman web kita akan terlihat sangat polos, membosankan, dan hanya berupa teks hitam di atas latar
+                belakang putih.</p>
+
+            <p>CSS berfungsi untuk memisahkan konten (HTML) dari presentasi visual. Dengan menggunakan file CSS
+                eksternal, kita bisa mengatur warna, jenis font, ukuran teks, bayangan kotak, hingga tata letak
+                responsif pada semua halaman web sekaligus.</p>
+
+            <h3>1. Menghubungkan CSS dengan HTML</h3>
+            <p>Metode terbaik dan paling rapi untuk pemula adalah menggunakan <strong>External CSS</strong>. Kita
+                menulis kode gaya di file terpisah bernama <code>style.css</code>, kemudian memanggilnya di dalam tag
+                <code>&lt;head&gt;</code> di setiap halaman HTML yang kita miliki.</p>
+
+            <div class="blok-kode">
+                <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+            </div>
+
+            <h3>2. Aturan Dasar & Selector CSS</h3>
+            <p>Kode CSS bekerja dengan cara memilih elemen HTML (menggunakan Selector) lalu memberikan nilai gaya baru
+                padanya. Berikut adalah contoh sintaks dasar CSS yang paling sering digunakan:</p>
+
+            <!-- Box Contoh Code CSS -->
+            <div class="blok-kode">
+                <pre><code>/* Mengubah gaya seluruh tag paragraf di web */
+p {
+    color: #a0a0a0;     /* Warna teks abu-abu */
+    font-size: 16px;    /* Ukuran teks */
+    line-height: 1.6;   /* Jarak antar baris */
+}
+
+/* Mengubah gaya elemen berdasarkan Class */
+.kartu-artikel {
+    background-color: #111111;
+    border-radius: 10px;
+    padding: 20px;
+}</code></pre>
+            </div>
+
+            <h3>Mengapa CSS Sangat Penting?</h3>
+            <p>CSS tidak hanya membuat web terlihat indah, tetapi juga memengaruhi pengalaman pengguna (User
+                Experience). Tata letak yang rapi, tombol dengan efek transisi yang interaktif saat didekati kursor,
+                hingga penataan teks yang nyaman dibaca adalah hasil dari pengaturan CSS yang baik.</p>
+
+            <p>Setelah memahami struktur dasar HTML, menguasai CSS adalah langkah kedua paling seru dalam petualanganmu
+                membuat website modern pertamamu!</p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="isi-footer">
+            <div class="kolom-footer">
+                <h4>KATEGORI BELAJAR</h4>
+                <ul>
+                    <li><a href="artikel_html.html">HTML Pemula</a></li>
+                    <li><a href="artikel_css.html">CSS Dasar</a></li>
+                    <li><a href="artikel_js.html">JavaScript Logika</a></li>
+                    <li><a href="artikel_vscode.html">Tips Web Developer</a></li>
+                    <li><a href="artikel_php.html">Belajar PHP</a></li>
+                    <li><a href="artikel_github.html">Tutorial GitHub</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>PERUSAHAAN</h4>
+                <ul>
+                    <li><a href="tantang.html">Tentang Kami</a></li>
+                    <li><a href="galeri.html">Galeri Tim</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>LEGALITAS</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 WebEdu. Muhammad Raditya Duta Pratama Xpplg 1.
+        </div>
+    </footer>
+
+    <script src="animasi.js"></script>
+</body>
+
+</html>

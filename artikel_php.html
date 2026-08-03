@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Artikel PHP - Web Edu</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            Web<span>Edu</span>
+        </div>
+        
+        <ul class="menu-nav">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kategori.html">Kategori</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="tantang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+
+        <button id="tombol-tema">☀️ Mode Terang</button>
+    </nav>
+
+    <main class="area-baca">
+        
+        <a href="kategori.html" class="tombol-kembali">&larr; Kembali</a>
+
+        <article class="header-artikel">
+            <div class="wadah-judul-flex">
+                <h1>Mengenal PHP: Backend untuk Pemula</h1>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="Logo PHP" class="logo-judul-artikel">
+            </div>
+            
+            <div class="meta-artikel">
+                <span class="meta-kategori">PHP</span>
+                <span>Oleh: Tim WebEdu</span>
+            </div>
+        </article>
+
+        <section class="isi-artikel">
+            <p>Kita kembali lagi ke analogi membangun rumah. Jika HTML adalah rangka bangunan, CSS adalah dekorasi, dan JavaScript adalah instalasi listriknya, maka <strong>PHP (Hypertext Preprocessor)</strong> adalah mesin genset utama dan sistem pengolahan airnya. PHP adalah bahasa pemrograman <em>server-side</em> yang bekerja di balik layar untuk mengolah data website.</p>
+            
+            <p>Tanpa PHP, website kita hanya bisa menampilkan data statis yang ditulis manual di file HTML. Dengan PHP, website kamu bisa menjadi dinamis; bisa menyimpan data pendaftaran, mengelola sistem login akun, hingga menampilkan ribuan data artikel secara otomatis dari sebuah database tanpa perlu membuat ribuan file HTML baru.</p>
+
+            <h3>1. Sintaks Dasar PHP</h3>
+            <p>Kode PHP dieksekusi di server komputer, lalu hasilnya dikirim ke browser dalam bentuk HTML biasa. Untuk menuliskan kodenya, kita wajib membungkus script kita menggunakan tag pembuka dan penutup khusus PHP, yaitu <code>&lt;?php ... ?&gt;</code>.</p>
+
+            <div class="blok-kode">
+                <pre><code>&lt;?php
+    // Ini adalah komentar di PHP
+    echo "Selamat datang di dunia Backend Developer!";
+?&gt;</code></pre>
+            </div>
+
+            <h3>2. Mengirim dan Mengolah Data</h3>
+            <p>Kekuatan utama PHP terletak pada kemampuannya menangkap data yang dikirim oleh pengguna dari halaman depan website (biasanya dikirim lewat formulir/form HTML). Contoh paling sering dipakai adalah mengambil data inputan menggunakan metode POST.</p>
+
+            <div class="blok-kode">
+                <pre><code>// 1. Cek apakah ada data nama yang dikirim dari form
+if (isset($_POST['nama_user'])) {
+    $nama = $_POST['nama_user'];
+    
+    // 2. Beri respon selamat datang secara dinamis
+    echo "Halo " . $nama . ", kamu berhasil masuk ke server!";
+}</code></pre>
+            </div>
+
+            <h3>Belajar Logika Backend</h3>
+            <p>Karena PHP berjalan langsung di server, bahasa ini sangat penting dikuasai jika kamu ingin membuat web yang interaktif di level fungsionalitas sistem (seperti web e-commerce atau portal berita). Kamu akan mengeksplorasi cara mengkoneksikan website dengan database MySQL, mengamankan password user, hingga mengatur alur logika data website.</p>
+            
+            <p>Selamat, sekarang trisula *front-end* lu (HTML, CSS, JS) sudah lengkap dipadukan dengan pondasi *back-end* yang kokoh menggunakan PHP. Lu udah siap buat bikin projek web yang jauh lebih canggih!</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="isi-footer">
+            <div class="kolom-footer">
+                <h4>KATEGORI BELAJAR</h4>
+                <ul>
+                    <li><a href="artikel_html.html">HTML Pemula</a></li>
+                    <li><a href="artikel_css.html">CSS Dasar</a></li>
+                    <li><a href="artikel_js.html">JavaScript Logika</a></li>
+                    <li><a href="artikel_vscode.html">Tips Web Developer</a></li>
+                    <li><a href="artikel_php.html">Belajar PHP</a></li>
+                    <li><a href="artikel_github.html">Tutorial GitHub</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>PERUSAHAAN</h4>
+                <ul>
+                    <li><a href="tantang.html">Tentang Kami</a></li>
+                    <li><a href="galeri.html">Galeri Tim</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>LEGALITAS</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 WebEdu. Muhammad Raditya Duta Pratama Xpplg 1.
+        </div>
+    </footer>
+
+    <script src="animasi.js"></script>
+</body>
+</html>

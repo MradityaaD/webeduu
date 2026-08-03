@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Web Edu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            Web<span>Edu</span>
+        </div>
+        
+        <ul class="menu-nav">
+            <!-- Perhatiin bro: Warna aksen sekarang pindah ke 'Kontak' -->
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kategori.html">Kategori</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="tantang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html" style="color: var(--warna-aksen);">Kontak</a></li>
+        </ul>
+
+        <button id="tombol-tema">☀️ Mode Terang</button>
+    </nav>
+
+    <!-- KONTEN UTAMA KONTAK -->
+    <main class="area-kontak">
+        
+        <!-- BAGIAN KIRI: Informasi Tulisan -->
+        <div class="info-kontak">
+            <h1>Mari Berdiskusi!</h1>
+            <p>Punya pertanyaan, saran untuk materi presentasi, atau sekadar ingin menyapa? Jangan ragu untuk menghubungi kami melalui form di samping atau melalui kontak di bawah ini.</p>
+            
+            <div class="item-info">
+                <h4>📧 EMAIL</h4>
+                <p>halo@webedu.com</p>
+            </div>
+
+            <div class="item-info">
+                <h4>📱 WHATSAPP</h4>
+                <p>+62 812 3456 7890</p>
+            </div>
+
+            <div class="item-info">
+                <h4>📍 LOKASI</h4>
+                <p>iya situ , jalan sanaan dikit <br>lurus terus, depan martabak</p>
+            </div>
+        </div>
+
+        <!-- BAGIAN KANAN: Kotak Pengisian (Form) -->
+        <div class="kotak-form">
+            <!-- Pake tag <form> walau belum nyambung backend, biar secara visual bener -->
+            <form action="#">
+                <div class="grup-input">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama kamu..." required>
+                </div>
+
+                <div class="grup-input">
+                    <label>Alamat Email</label>
+                    <input type="email" placeholder="emailkamu@contoh.com" required>
+                </div>
+
+                <div class="grup-input">
+                    <label>Pesan yang ingin disampaikan</label>
+                    <!-- textarea ini buat ngetik paragraf panjang -->
+                    <textarea rows="5" placeholder="Ketik pesanmu di sini..." required></textarea>
+                </div>
+
+                <button type="button" class="btn-kirim">Kirim Pesan Sekarang 🚀</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="isi-footer">
+            <div class="kolom-footer">
+                <h4>KATEGORI BELAJAR</h4>
+                <ul>
+                    <li><a href="artikel_html.html">HTML Pemula</a></li>
+                    <li><a href="artikel_css.html">CSS Dasar</a></li>
+                    <li><a href="artikel_js.html">JavaScript Logika</a></li>
+                    <li><a href="artikel_vscode.html">Tips Web Developer</a></li>
+                    <li><a href="artikel_php.html">Belajar PHP</a></li>
+                    <li><a href="artikel_github.html">Tutorial GitHub</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>PERUSAHAAN</h4>
+                <ul>
+                    <li><a href="tantang.html">Tentang Kami</a></li>
+                    <li><a href="galeri.html">Galeri Tim</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="kolom-footer">
+                <h4>LEGALITAS</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 WebEdu. Muhammad Raditya Duta Pratama Xpplg 1.
+        </div>
+    </footer>
+
+    <script src="animasi.js"></script>
+</body>
+</html>

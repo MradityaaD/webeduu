@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori - Web Edu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            Web<span>Edu</span>
+        </div>
+        
+        <ul class="menu-nav">
+            <!-- Perhatiin bro: Warna aksen sekarang pindah ke 'Kategori' -->
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kategori.html" style="color: var(--warna-aksen);">Kategori</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="tantang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+
+        <button id="tombol-tema">☀️ Mode Terang</button>
+    </nav>
+
+    <!-- HEADER KATEGORI & PENCARIAN -->
+    <header class="header-kategori">
+        <h1>Jelajahi Kategori Belajar</h1>
+        
+        <!-- Input Pencarian -->
+        <!-- 'list="saran-kategori"' nyambung ke <datalist> di bawah biar muncul hint -->
+        <input type="text" id="input-cari" class="kotak-pencarian" placeholder="Cari HTML, CSS, atau lainnya..." list="saran-kategori">
+        
+        <!-- Ini data hint/saran yang otomatis muncul pas kotak search dipencet -->
+        <datalist id="saran-kategori">
+            <option value="HTML">
+            <option value="CSS">
+            <option value="JavaScript">
+            <option value="Tools">
+            <option value="PHP">
+            <option value="GitHub">
+        </datalist>
+    </header>
+
+    <!-- KONTEN 6 KARTU -->
+    <main class="area-artikel">
+        <!-- Pakai class baru 'daftar-kartu-banyak' biar bisa 6 kotak -->
+        <div class="daftar-kartu-banyak" id="wadah-kartu">
+            
+            <!-- Kartu 1: HTML -->
+            <article class="kartu item-kategori">
+                <div class="wadah-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="Logo HTML" class="gambar-logo">
+                </div>
+                <span class="kategori-label">HTML DASAR</span>
+                <h3>Mengenal HTML5</h3>
+                <p>Pelajari pondasi utama dari setiap website. Kenali tag-tag penting seperti header, body, dan paragraf.</p>
+                <a href="artikel_html.html">Baca Selengkapnya &rarr;</a>
+            </article>
+
+            <!-- Kartu 2: CSS -->
+            <article class="kartu item-kategori">
+                <div class="wadah-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="Logo CSS" class="gambar-logo">
+                </div>
+                <span class="kategori-label">CSS STYLING</span>
+                <h3>Mempercantik Web</h3>
+                <p>Mari belajar memberi warna, mengatur tata letak, dan tipe font untuk membuat web menjadi responsif.</p>
+                <a href="artikel_css.html">Baca Selengkapnya &rarr;</a>
+            </article>
+
+            <!-- Kartu 3: JAVASCRIPT (BARU) -->
+            <article class="kartu item-kategori">
+                <div class="wadah-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Logo JS" class="gambar-logo">
+                </div>
+                <span class="kategori-label">JAVASCRIPT</span>
+                <h3>Membuat Web Interaktif</h3>
+                <p>Tambahkan logika dan interaktivitas. Bikin website lu bisa merespon klik dan input dinamis dari user.</p>
+                <a href="artikel_js.html">Baca Selengkapnya &rarr;</a>
+            </article>
+
+            <!-- Kartu 4: TOOLS (BARU) -->
+            <article class="kartu item-kategori">
+                <div class="wadah-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="Logo VSCode" class="gambar-logo">
+                </div>
+                <span class="kategori-label">TOOLS PEMULA</span>
+                <h3>Setup VS Code</h3>
+                <p>Senjata wajib web developer. Siapkan text editor VS Code terbaikmu dan kuasai fitur Inspect Element.</p>
+                <a href="artikel_vscode.html">Baca Selengkapnya &rarr;</a>
+            </article>
+
+            <!-- Kartu 5: PHP (BARU) -->
+            <article class="kartu item-kategori">
+                <div class="wadah-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="Logo PHP" class="gambar-logo">
+                </div>
+                <span class="kategori-label">BACKEND PHP</span>
+                <h3>Dasar PHP</h3>
+                <p>Pintu masuk menuju web dinamis. Belajar cara memproses data form dan menghubungkan web ke database.</p>
+                <a href="artikel_php.html">Baca Selengkapnya &rarr;</a>
+            </article>
+
+            <!-- Kartu 6: GITHUB (BARU) -->
+            <article class="kartu item-kategori">
+                <div class="wadah-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" style="filter: invert(1);" alt="Logo Github" class="gambar-logo">
+                </div>
+                <span class="kategori-label">KOLABORASI</span>
+                <h3>Tutorial GitHub</h3>
+                <p>Simpan kodingan lu dengan aman. Belajar cara upload project ke GitHub dan bekerja dalam tim.</p>
+                <a href="artikel_github.html">Baca Selengkapnya &rarr;</a>
+            </article>
+
+            <!-- Ini pesan yang bakal muncul kalau pencarian ngawur -->
+            <p id="pesan-kosong">Waduh bro, materi yang lu cari belum ada nih! 😢 Coba kata kunci lain.</p>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="isi-footer">
+            
+            <div class="kolom-footer">
+                <h4>KATEGORI BELAJAR</h4>
+                <ul>
+                    <li><a href="artikel_html.html">HTML Pemula</a></li>
+                    <li><a href="artikel_css.html">CSS Dasar</a></li>
+                    <li><a href="artikel_js.html">JavaScript Logika</a></li>
+                    <li><a href="artikel_vscode.html">Tips Web Developer</a></li>
+                    <li><a href="artikel_php.html">Belajar PHP</a></li>
+                    <li><a href="artikel_github.html">Tutorial GitHub</a></li>
+                </ul>
+            </div>
+
+            <div class="kolom-footer">
+                <h4>PERUSAHAAN</h4>
+                <ul>
+                    <li><a href="tantang.html">Tentang Kami</a></li>
+                    <li><a href="galeri.html">Galeri Tim</a></li>
+                    <li><a href="kontak.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="kolom-footer">
+                <h4>LEGALITAS</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <div class="copyright">
+            &copy; 2026 WebEdu. Muhammad Raditya Duta Pratama Xpplg 1.
+        </div>
+    </footer>
+
+    <script src="animasi.js"></script>
+</body>
+</html>
