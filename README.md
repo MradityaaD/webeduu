@@ -16,20 +16,6 @@ Tambahkan screenshot di sini setelah kamu simpan gambarnya, misalnya di folder d
 
 ---
 
-## 📑 Daftar Isi
-
-- [Fitur](#-fitur)
-- [Isi Materi](#-isi-materi)
-- [Halaman Website](#-halaman-website)
-- [Teknologi](#-teknologi)
-- [Struktur Folder](#-struktur-folder)
-- [Cara Menjalankan](#-cara-menjalankan)
-- [Deploy ke GitHub Pages](#-deploy-ke-github-pages)
-- [Rencana Pengembangan](#-rencana-pengembangan)
-- [Pembuat](#-pembuat)
-
----
-
 ## ✨ Fitur
 
 - **Mode Gelap / Terang**: tombol di navbar mengganti tema seluruh halaman (warna aksen berubah dari oranye ke biru toska). Pilihan tema tetap dipakai saat berpindah halaman selama tab yang sama masih terbuka.
