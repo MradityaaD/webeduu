@@ -9,10 +9,7 @@
 
 Proyek ini dibuat sebagai tugas sekolah dan dibangun **tanpa framework**, hanya dengan HTML, CSS, dan JavaScript murni.
 
-<!--
-Tambahkan screenshot di sini setelah kamu simpan gambarnya, misalnya di folder docs/:
-![Tampilan Beranda](docs/beranda.png)
--->
+🔗 **web edu:** [Buka web edu](https://mradityaad.github.io/webeduu/)
 
 ---
 
